@@ -1,0 +1,263 @@
+:root {
+    --nav-width: 980px;
+    --background-color: #fef5f5;
+    --custom-brown: #BC4C2AFF;
+    --custom-black: #111111FF;
+    --white: #FFFFFFFF;
+}
+
+
+@font-face {
+    font-family: "avenir";
+    src: local('../assets/fonts/avenir35.ttf');
+}
+
+@font-face {
+    font-family: "didot";
+    src: local('../assets/fonts/didotW01Italic.ttf');
+}
+
+@font-face {
+    font-family: "poppins";
+    src: local('../assets/fonts/Poppins-SemiBold.ttf');
+}
+
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: var(--background-color);
+}
+
+header section {
+    display: flex;
+    height: 92px;
+    margin-bottom: 14px;
+    padding: 0 50px 0 50px;
+}
+
+header section div {
+    /*border: 1px solid black;*/
+}
+
+
+
+header section div.search-bar {
+    width: calc((100% - var(--nav-width)) / 2);
+    display: flex;
+    align-items: center;
+}
+
+header section div div.search-wrap {
+    display: flex;
+    align-items: center;
+    width: 216px;
+    height: 40px;
+    border-bottom: 1px solid var(--custom-brown);
+}
+
+header section div div.search-wrap:hover {
+    border-bottom: 2px solid var(--custom-brown);
+}
+
+header section div.search-bar div.search-wrap div.button {
+    width: 16px;
+    height: 16px;
+    border: 0;
+    padding-left: 12px;
+    align-items: center;
+}
+
+header section div.search-bar div.search-wrap div.search-input {
+    width: 100%;
+    align-items: center;
+}
+
+header section div.search-bar div.search-wrap div.search-input input {
+    width: 100%;
+    padding: 8px;
+    background-color: transparent;
+    border: none;
+    font-family: avenir, sans-serif;
+    font-weight: 100;
+    color: var(--custom-brown);
+    font-size: 16px;
+}
+
+header section div.search-bar div.search-wrap div.search-input input::placeholder {
+    font-family: avenir, sans-serif;
+    font-weight: 100;
+    color: var(--custom-brown);
+}
+
+header section div.search-bar div.search-wrap div.search-input input:focus {
+    outline-width: 0;
+}
+
+
+
+header section div.logo {
+    width: var(--nav-width);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header section div.logo a {
+    font-family: didot, serif;
+    font-weight: lighter;
+    font-size: 40px;
+    font-style: italic;
+    text-decoration: none;
+    color: var(--custom-brown);
+}
+
+
+
+
+header section div.buttons {
+    width: calc((100% - var(--nav-width)) / 2);
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+
+header section div.buttons div {
+    width: 120px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header section div.buttons div a {
+    width: 20px;
+    height: 20px;
+    margin-left: 6px;
+}
+
+header section div.buttons div a.login-image  {
+    width: 23px;
+    height: 23px;
+    margin-left: 35px;
+    margin-right: 2px;
+    margin-bottom: 5px;
+}
+
+header section div.buttons div a.header-button {
+    font-family: avenir, sans-serif;
+    font-size: 16px;
+    font-weight: 100;
+    text-decoration: none;
+    color: var(--custom-brown);
+    margin-bottom: 5px;
+}
+
+header section div.buttons div a.login-button {
+    width: 50px;
+}
+
+header section div.buttons div a.cart-button {
+    width: 70px;
+}
+
+
+
+header nav {
+    display: flex;
+    justify-content: center;
+    height: 67px;
+}
+
+header nav ul {
+    margin: 0;
+    padding: 0;
+    width: 705px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header nav ul li {
+    width: 140px;
+    display: inline-block;
+    text-align: center;
+
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: var(--custom-black);
+    font-family: search-bar-font, sans-serif;
+    font-size: 16px;
+    font-weight: 100;
+}
+
+header nav ul li a:hover {
+    color: var(--custom-brown);
+}
+
+main section {
+    width: 100%;
+    height: 604px;
+
+}
+
+main section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+main section div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main section div a div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 242px;
+    height: 59px;
+    border: 1px solid var(--white);
+}
+
+main section div h1 {
+    font-family: poppins, sans-serif;
+    letter-spacing: 0.2em;
+    font-size: 42px;
+    font-weight: 600;
+    color: var(--white);
+}
+
+main section div a {
+    text-decoration: none;
+    color: var(--white);
+    font-family: avenir, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+main section div a:hover {
+    background-color: var(--white);
+    color: var(--custom-brown);
+}
+
+.container {
+    position: relative;
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
